@@ -17,3 +17,5 @@ dist
 # config file
 # nuxt.config.js
 # app.config.js
+
+package-lock.json
