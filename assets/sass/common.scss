@@ -1,0 +1,132 @@
+html{
+  font-size: 50px;
+  @media screen and (max-width: 1399px) {
+    font-size: 45px;
+  }
+}
+
+body{
+  font-family: "Helvetica Neue",Helvetica,"Microsoft YaHei",Arial,sans-serif;
+  font-size: var(16);
+  color: #333;
+  background: $bg-body;
+}
+
+.container{
+  width: var(1050);
+  margin: auto;
+}
+
+// 过渡
+//.fade-enter-active, .fade-leave-active {
+//  transition: opacity .5s;
+//}
+//.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+//  opacity: 0;
+//}
+
+// 输入框
+.el-input{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #dcdfe6;
+  border-radius: 4px;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #606266;
+  background-color: #fff;
+  outline: none;
+  transition: .1s;
+  &:hover{
+    border-color: #c0c4cc;
+  }
+}
+
+// 按钮
+.el-btn{
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid $bg-navbar;
+  border-radius: 3px;
+  padding: 8px 13px;
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  background: $bg-navbar;
+  line-height: 1;
+  text-align: center;
+  transition: .1s;
+  white-space: nowrap;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  &:hover,
+  &:focus{
+    opacity: .8;
+  }
+}
+
+// 侧边栏
+.aside-block{
+  padding: 10px;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(255, 0, 0, 0.05);
+  .title{
+    border-bottom: 1px solid $bg-body;
+    padding-bottom: 10px;
+    color: #666;
+  }
+}
+
+// 置顶
+.is-top{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 38px;
+  color: #ff00008a;
+  line-height: 1;
+}
+
+// music
+.music-dynamic{
+  padding-right: 2px;
+  i{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 1px;
+    margin: 1px;
+    background: #fff;
+    transform-origin: 0 100% 0;
+    &:nth-child(1){
+      animation: m-dynamic .8s infinite;
+    }
+    &:nth-child(2){
+      animation: m-dynamic 1s infinite;
+    }
+    &:nth-child(3){
+      animation: m-dynamic 1.1s infinite;
+    }
+    &:nth-child(4){
+      animation: m-dynamic 1.3s infinite;
+    }
+  }
+  &.pause i{
+    animation-play-state: paused;
+  }
+}
+@keyframes m-dynamic{
+  0%{
+    transform: scaleX(1.2) scaleY(.3);
+  }
+  50%{
+    transform: scaleX(1.2) scaleY(1);
+  }
+  100%{
+    transform: scaleX(1.2) scaleY(.3);
+  }
+}

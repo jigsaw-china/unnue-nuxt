@@ -1,0 +1,36 @@
+@import 'normalize.css';
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li{
+  list-style: none;
+}
+
+i{
+  font-style: normal;
+}
+
+a{
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  transition: .3s;
+  &:hover{
+    color: $orange;
+  }
+}
+
+::selection {
+  background-color: $orange;
+  color: #fff;
+}
+
+::-webkit-scrollbar-track-piece{width:5px;background-color:#f2f2f2;border-radius:0;}
+::-webkit-scrollbar{width:5px;height:5px;}
+::-webkit-scrollbar-thumb{height:0;background: #f19fb6;border-radius:0;}
+::-webkit-scrollbar-thumb:hover{background: #deb0bb;}

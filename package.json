@@ -1,0 +1,38 @@
+{
+  "name": "unnue-nuxt",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "274111451@qq.com",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "font-awesome": "^4.7.0",
+    "gravatar": "^1.6.0",
+    "highlight.js": "^9.12.0",
+    "markdown-it": "^8.4.2",
+    "markdown-it-link-attributes": "^2.1.0",
+    "moment": "^2.22.2",
+    "normalize.css": "^8.0.0",
+    "nuxt": "^1.0.0",
+    "prettier": "^1.13.7",
+    "simplemde": "^1.11.2",
+    "vue-loader": "^13.7.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0"
+  }
+}

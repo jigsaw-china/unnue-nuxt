@@ -1,0 +1,19 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Editor directories and files
+.idea
+.vscode
+
+# config file
+# nuxt.config.js
+# app.config.js

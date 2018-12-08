@@ -1,0 +1,45 @@
+// 仅用于定义变量和方法
+
+/******************************** 变量 ********************************/
+$bg-body: #f4eece;
+$bg-navbar: #ccb28d;
+$orange: #FFA500;
+$white: #fff;
+$gray: #ddd;
+$border-color: #ebe3bc;
+
+/******************************** 混合 ********************************/
+/// 背景透明
+/// @param color 颜色
+/// @param opacity 透明度
+@mixin bg-opacity($color: #fff, $opacity: .85) {
+  background: rgba($color, $opacity);
+}
+
+/// 绝对定位
+/// @param zindex 层级
+@mixin absolute($zindex: 1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $zindex;
+  width: 100%;
+  height: 100%;
+}
+
+/// 超出省略
+/// @param line 行数
+@mixin ellipsis($line: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:$line;
+  -webkit-box-orient: vertical;
+}
+
+/******************************** 方法 ********************************/
+/// 转换单位
+/// @param px 像素值
+@function var($px) {
+  @return $px / 50 + rem
+}
