@@ -13,7 +13,7 @@ module.exports = {
       { 'http-equiv': 'Content-Type', content: 'text/html' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, user-scalable=no' },
       { name: 'author', content: '274111451@qq.com' },
-      { hid: 'keywords', name: 'keywords', content: '开媛笔记,开猿笔记,开源笔记,前端技术,个人网站,开源博客,博客,鲍亚龙,unnue,nuxt,ssr,vue,nodejs,javascript' },
+      { hid: 'keywords', name: 'keywords', content: '开媛笔记,开猿笔记,开源笔记,开源博客,开源个人网站,前后端分离网站,前端技术问题,vue ssr,nodejs项目,nuxt项目' },
       { hid: 'description', name: 'description', content: '开媛笔记，鲍亚龙的开源网站，基于nuxt ssr首屏服务器端渲染 ⚡。用于分享、记录、交流和学习，希望可以帮助到小伙伴们。同时网站在不断更新，创造属于猿（媛）的世界 🍬 -$Bao Yalong .. ' }
     ],
     link: [
