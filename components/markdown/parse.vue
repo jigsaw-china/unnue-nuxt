@@ -55,7 +55,7 @@
       border: 1px solid;
       border-radius: 6px;
       margin: 5px auto;
-      white-space: pre-line;
+      white-space: pre-wrap;
       code{
         font-family: Consolas,Inconsolata,Courier,monospace;
         font-size: 14px;
