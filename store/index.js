@@ -6,6 +6,7 @@ import category from './modules/category'
 import article from './modules/article'
 import comment from './modules/comment'
 import guestbook from './modules/guestbook'
+import profile from './modules/profile'
 
 Vue.use(Vuex)
 
@@ -15,7 +16,8 @@ const store = () => new Vuex.Store({
     category,
     article,
     comment,
-    guestbook
+    guestbook,
+    profile
   },
   actions: {
     // 初始化，自动执行
@@ -23,7 +25,8 @@ const store = () => new Vuex.Store({
       return Promise.all([
         store.dispatch('ArticleBestList'),
         store.dispatch('TagList'),
-        store.dispatch('CategoryList')
+        store.dispatch('CategoryList'),
+        store.dispatch('Profile')
       ])
     }
   }

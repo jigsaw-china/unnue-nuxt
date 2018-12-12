@@ -1,32 +1,24 @@
-import { guestbookList, guestbook } from '../api/guestbook'
+import { profile } from '../api/profile'
 
-const _guestbook = {
+const _profile = {
   state: {
-    list: []
+    profile: {}
   },
   mutations: {
-    SET_GUESTBOOK_LIST: (state, list) => {
-      state.list = list
+    SET_PROFILE: (state, profile) => {
+      state.profile = profile
     }
   },
   actions: {
-    // 列表
-    async GuestbookList({ commit }) {
-      const result = await guestbookList()
+    // 个人档
+    async Profile({ commit }) {
+      const result = await profile()
       if (result.data.code === 1){
         const res = result.data.result
-        commit('SET_GUESTBOOK_LIST', res.list)
+        commit('SET_PROFILE', res)
       }
-    },
-    // 留言
-    async Guestbook({ commit, state }, data) {
-      const result = await guestbook(data)
-      if (result.data.code === 1){
-        commit('SET_GUESTBOOK_LIST', [ result.data.result, ...state.list ])
-      }
-			return result
-    },
+    }
   }
 }
 
-export default _guestbook
+export default _profile

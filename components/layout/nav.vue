@@ -20,7 +20,7 @@
           <nuxt-link class="link" to="/"><s>音乐</s></nuxt-link>
         </li>
         <li class="item">
-          <nuxt-link class="link" to="/"><s>个人档</s></nuxt-link>
+          <nuxt-link class="link" to="/profile">个人档</nuxt-link>
         </li>
         <li class="item">
           <nuxt-link class="link" to="/"><s>更多</s></nuxt-link>
