@@ -42,6 +42,14 @@
           {
             title: '我的天空',
             url: 'https://api.bzqll.com/music/tencent/url?id=0043WGTm3kacAQ&key=579621905'
+          },
+          {
+            title: '身骑白马',
+            url: 'https://api.bzqll.com/music/tencent/url?id=002Iw9C92SzTTA&key=579621905'
+          },
+          {
+            title: '暗香',
+            url: 'https://api.bzqll.com/music/tencent/url?id=001zlK5G3ckYSm&key=579621905'
           }
         ]
       }
