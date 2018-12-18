@@ -59,22 +59,21 @@
           x: Math.random() * s,
           y: Math.random() * o
         }));
-        l.push(new e),
-          l.push(new e),
-          function c() {
-            const img = new Image()
-            img.src = "/images/banner.jpg",
-            img.onload = function(){
-              a.fillStyle = a.createPattern(img,"no-repeat"),
-                a.fillRect(0,0,s,o);
-            };
+        const img = new Image()
+        img.src = "/images/banner.jpg";
+        img.onload = function(){
+          (function c() {
+            a.fillStyle = a.createPattern(img,"no-repeat"),
+              a.fillRect(0,0,s,o);
 
             var n = "rgba(255, 255, 255, 0.5)";
             a.fillStyle = n,
               a.strokeStyle = n;
             for (var t = l.length; t--;) l[t].update();
             window.requestAnimationFrame(c)
-          } ()
+          }) ()
+        };
+        l.push(new e)
       }
     }
   }
