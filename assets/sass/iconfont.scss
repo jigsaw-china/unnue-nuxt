@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'iconfont';  /* project id 809185 */
-  src: url('//at.alicdn.com/t/font_809185_5phtj4t97wk.eot');
-  src: url('//at.alicdn.com/t/font_809185_5phtj4t97wk.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_809185_5phtj4t97wk.woff') format('woff'),
-  url('//at.alicdn.com/t/font_809185_5phtj4t97wk.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_809185_5phtj4t97wk.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.eot');
+  src: url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -73,6 +73,10 @@
 .icon-close:before { content: "\e60b"; }
 
 // music
+.icon-m-sym:before { content: "\e6b7"; }
 .icon-m-play:before { content: "\e645"; }
 .icon-m-pause:before { content: "\e608"; }
 .icon-m-stop:before { content: "\e61f"; }
+.icon-m-prev:before { content: "\e626"; }
+.icon-m-next:before { content: "\f260"; }
+.icon-m-vol:before { content: "\e621"; }

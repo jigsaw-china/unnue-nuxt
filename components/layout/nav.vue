@@ -17,7 +17,7 @@
           <nuxt-link class="link" to="/guestbook">留言板</nuxt-link>
         </li>
         <li class="item">
-          <nuxt-link class="link" to="/"><s>音乐</s></nuxt-link>
+          <nuxt-link class="link" to="/music">音乐</nuxt-link>
         </li>
         <li class="item">
           <nuxt-link class="link" to="/profile">个人档</nuxt-link>

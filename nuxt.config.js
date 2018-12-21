@@ -36,6 +36,7 @@ module.exports = {
     { src: '~/plugins/seo', ssr: false },
     { src: '~/plugins/anniTitle', ssr: false },
     { src: '~/plugins/audio', ssr: false },
+    { src: '~/plugins/base64', ssr: false },
     { src: '~/plugins/filters' },
     { src: '~/plugins/gravatar' },
   ],
@@ -51,7 +52,8 @@ module.exports = {
       'axios',
       'simplemde',
       'markdown-it',
-      'moment'
+      'moment',
+      'js-base64'
     ],
     maxChunkSize: 350000,
     extractCSS: { allChunks: true },

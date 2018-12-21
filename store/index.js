@@ -7,6 +7,7 @@ import article from './modules/article'
 import comment from './modules/comment'
 import guestbook from './modules/guestbook'
 import profile from './modules/profile'
+import music from './modules/music'
 
 Vue.use(Vuex)
 
@@ -17,7 +18,8 @@ const store = () => new Vuex.Store({
     article,
     comment,
     guestbook,
-    profile
+    profile,
+    music
   },
   actions: {
     // 初始化，自动执行
@@ -26,7 +28,7 @@ const store = () => new Vuex.Store({
         store.dispatch('ArticleBestList'),
         store.dispatch('TagList'),
         store.dispatch('CategoryList'),
-        store.dispatch('Profile')
+        store.dispatch('MusicList')
       ])
     }
   }

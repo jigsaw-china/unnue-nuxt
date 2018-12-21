@@ -1,101 +1,38 @@
 <template>
   <div class="music">
-    <div class="block" @click="pause = !pause">
+    <div class="block" @click="play">
       <span class="iconfont" :class="pause ? ' icon-m-play' : 'icon-m-pause'"></span>
     </div>
     <div class="block">
-      <span class="music-dynamic" :class="{pause: pause}">
+      <nuxt-link class="music-dynamic" :class="{pause}" to="/music">
         <i></i>
         <i></i>
         <i></i>
         <i></i>
-      </span>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
+  import { mapState } from 'vuex'
+
   export default {
     name: 'music-small',
-    data() {
-      return {
-        currentPlayIndex: 0,
-        pause: true,
-        music: {},
-        musicList: [
-          {
-            title: '月光变奏曲',
-            url: 'https://api.bzqll.com/music/tencent/url?id=002GrJ771EmliH&key=579621905'
-          },
-          {
-            title: '幻音宝盒',
-            url: 'https://api.bzqll.com/music/tencent/url?id=002WtCw213iFz7&key=579621905'
-          },
-          {
-            title: '梦太晚',
-            url: 'https://api.bzqll.com/music/tencent/url?id=00301vrC14cTmK&key=579621905'
-          },
-          {
-            title: '心之逆鳞',
-            url: 'https://api.bzqll.com/music/tencent/url?id=003Vqd0l1CVgxb&key=579621905'
-          },
-          {
-            title: '我的天空',
-            url: 'https://api.bzqll.com/music/tencent/url?id=0043WGTm3kacAQ&key=579621905'
-          },
-          {
-            title: '身骑白马',
-            url: 'https://api.bzqll.com/music/tencent/url?id=002Iw9C92SzTTA&key=579621905'
-          },
-          {
-            title: '暗香',
-            url: 'https://api.bzqll.com/music/tencent/url?id=001zlK5G3ckYSm&key=579621905'
-          }
-        ]
-      }
+    computed: {
+      ...mapState({
+        pause: state => state.music.pause
+      })
     },
     mounted () {
-      this.random()
-      this.init()
+      this.$store.dispatch('MusicInit')
     },
     methods: {
-      random () {
-        this.musicList.sort(_ => {
-          return 0.5 - Math.random()
-        })
-      },
-      async init () {
-        this.music = new Audio()
-        this.music.src = this.musicList[this.currentPlayIndex].url
-        // 只加载元数据
-        this.music.preload = 'metadata'
-        this.music.autoplay = 'autoplay'
-        this.music.volume = .5
-        // 当媒介数据已开始播放时运行脚本
-        this.music.onplay = _ => {
-          this.pause = false
-        }
-        // 当媒介已抵达结尾时运行脚本
-        this.music.onended = _ => {
-          if (this.currentPlayIndex === this.musicList.length - 1) {
-            this.currentPlayIndex = 0
-          }
-          this.music.src = this.musicList[++this.currentPlayIndex].url
-          this.music.play()
-        }
-      }
-    },
-    watch: {
-      pause (val) {
-        if (!val) {
-          this.music.play()
-        } else {
-          this.music.pause()
-        }
+      async play () {
+        this.$store.dispatch('MusicPlayOrPause')
       }
     }
   }
-
 </script>
 
 <style lang="scss" scoped>
@@ -115,9 +52,6 @@
         margin-left: auto;
         cursor: pointer;
       }
-    }
-    iframe{
-      display: none;
     }
   }
 </style>
