@@ -20,7 +20,8 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: `https://hm.baidu.com/hm.js?${baiduKey}` }
+      { src: `https://hm.baidu.com/hm.js?${baiduKey}` },
+      { src: '//cpro.baidustatic.com/cpro/ui/c.js', async: true, defer: true } // 广告
     ],
   },
   css: [

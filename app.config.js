@@ -8,3 +8,6 @@ export const SITE = {
   postfix: ' _开媛笔记 💳',
   adminUrl: isProdMode ? 'https://admin.unnue.com' : 'http://localhost:8081'
 };
+
+// 百度联盟id
+export const adId = 'u3852431';

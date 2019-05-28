@@ -1,10 +1,11 @@
 @font-face {
   font-family: 'iconfont';  /* project id 809185 */
-  src: url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.eot');
-  src: url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_809185_bvt50ox8vcr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_809185_yufqqk26vio.eot');
+  src: url('//at.alicdn.com/t/font_809185_yufqqk26vio.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_809185_yufqqk26vio.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_809185_yufqqk26vio.woff') format('woff'),
+  url('//at.alicdn.com/t/font_809185_yufqqk26vio.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_809185_yufqqk26vio.svg#iconfont') format('svg');
 }
 
 .iconfont {
@@ -21,6 +22,8 @@
 .icon-comment:before { content: "\e605"; }
 .icon-like:before { content: "\e622"; }
 .icon-classify:before { content: "\e6bd"; }
+.icon-enjoy:before { content: "\e609"; }
+.icon-enjoy2:before { content: "\e666"; }
 
 // tags
 .icon-tags:before { content: "\e61d"; }
@@ -64,6 +67,7 @@
 .icon-tuiguang:before { content: "\e601"; }
 .icon-tuijian:before { content: "\e623"; }
 .icon-top:before { content: "\e600"; }
+.icon-ad:before { content: "\e678"; }
 
 // console
 .icon-console:before { content: "\e639"; }

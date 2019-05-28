@@ -3,6 +3,7 @@
     <search/>
     <articles/>
     <tags/>
+    <ad2/>
     <ad/>
   </aside>
 </template>
@@ -12,6 +13,7 @@
   import Articles from '../aside/articles'
   import Tags from '../aside/tags'
   import Ad from '../aside/ad'
+  import Ad2 from '../aside/ad2'
 
   export default {
     name: 'layout-aside',
@@ -19,7 +21,8 @@
       Search,
       Articles,
       Tags,
-      Ad
+      Ad,
+      Ad2
     }
   }
 </script>
