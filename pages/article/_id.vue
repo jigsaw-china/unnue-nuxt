@@ -1,5 +1,6 @@
 <template>
   <div class="detail">
+    <div class="bg" :style="{backgroundImage: `url(${article.thumb + imageView})`}"></div>
     <article class="article">
       <span class="iconfont icon-top is-top" v-if="article.isTop"></span>
       <div class="article-head">
@@ -70,6 +71,11 @@
         error({ statusCode: 404, message: result.data.message })
       }
     },
+    data () {
+      return {
+        imageView: '?imageView2/1/w/130/h/88/format/webp/interlace/1/q/75|watermark/2/text/dW5udWUuY29t/font/5a6L5L2T/fontsize/12/fill/I0ZGRkZGRg==/dissolve/40/gravity/SouthWest/dx/5/dy/5'
+      }
+    },
     computed: {
       ...mapState({
         article: state => state.article.detail,
@@ -97,6 +103,17 @@
 </script>
 
 <style lang="scss" scoped>
+  .bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(10px);
+    opacity: .95;
+  }
   .article{
     position: relative;
     padding: 10px 13px;
