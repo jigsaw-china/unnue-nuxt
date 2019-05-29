@@ -48,7 +48,7 @@
 *****
 
 ### 感谢支持
-![赞赏](https://unnnue.com/images/enjoy.png)
+![赞赏](https://unnue.com/images/enjoy.png)
 
 ## Build Setup
 
