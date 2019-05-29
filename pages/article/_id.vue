@@ -40,6 +40,10 @@
               @click="clickLike">
           <i class="iconfont icon-like"></i><i> {{article.liked ? '已赞' : '赞'}} ({{article.likeCount}})</i>
         </span>
+        <span class="enjoy" :class="{active: isActive}" @mousemove="showEnjoy">
+          <i class="iconfont icon-enjoy"></i>
+          <img class="img" @click="hideEnjoy" src='/images/enjoy.png' alt="赞赏码" title="支持一下"/>
+        </span>
       </div>
     </article>
     <comment-list :commentList="commentList"/>
@@ -73,6 +77,7 @@
     },
     data () {
       return {
+        isActive: false,
         imageView: '?imageView2/1/w/130/h/88/format/webp/interlace/1/q/75|watermark/2/text/dW5udWUuY29t/font/5a6L5L2T/fontsize/12/fill/I0ZGRkZGRg==/dissolve/40/gravity/SouthWest/dx/5/dy/5'
       }
     },
@@ -88,6 +93,12 @@
     methods: {
       clickLike () {
         this.$store.dispatch('ArticleLike')
+      },
+      showEnjoy () {
+        this.isActive = true
+      },
+      hideEnjoy () {
+        this.isActive = false
       }
     },
     head () {
@@ -166,12 +177,9 @@
       font-size: 14px;
       span{
         display: inline-block;
-        margin-left: 30px;
         color: #888;
-        &:first-child{
-          margin-left: auto;
-        }
         &.like{
+          margin-left: 30px;
           cursor: pointer;
           &.liked{
             color: #f95050;
@@ -184,7 +192,56 @@
             color: $orange;
           }
         }
+        &.enjoy{
+          float: right;
+          position: relative;
+          margin-right: 1px;
+          color: #ff7575;
+          transform-origin: right;
+          cursor: pointer;
+          .iconfont{
+            display: inline-block;
+            animation: m-rotate 8s linear infinite;
+          }
+          .img{
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px #999;
+            transform: translateY(-100%);
+            user-select: none;
+          }
+          &.active{
+            .img{
+              display: block;
+            }
+          }
+        }
       }
+    }
+  }
+
+  @keyframes m-rotate{
+    0%{
+      color: #ff7575;
+      transform: translateX(0px) translateY(-5px) rotate(10deg) scale(1.4);
+    }
+    25%{
+      transform: translateX(-10px) translateY(3px) rotate(-10deg) scale(1.4);
+    }
+    50%{
+      color: lightgreen;
+      transform: translateX(-30px) translateY(-4px) rotate(20deg) scale(1.4);
+    }
+    75%{
+      transform: translateX(-10px) translateY(2px) rotate(30deg) scale(1.4);
+    }
+    100%{
+      color: #ff7575;
+      transform: translateX(0px) translateY(-5px) rotate(10deg) scale(1.4);
     }
   }
 </style>

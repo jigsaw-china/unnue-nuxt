@@ -47,6 +47,9 @@
 
 *****
 
+### 感谢支持
+![赞赏](https://unnnue.com/images/enjoy.png)
+
 ## Build Setup
 
 ``` bash
