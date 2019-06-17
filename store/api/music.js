@@ -4,7 +4,8 @@ import request from '~/plugins/axios'
 export function musicList() {
   return new Promise(async (resolve) => {
     const list = await request({
-      url: `https://401852215.varwx.club/music`,
+      baseURL: 'https://401852215.varwx.club',
+      url: '/music',
       method: 'get'
     })
     resolve({
