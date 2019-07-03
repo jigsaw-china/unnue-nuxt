@@ -23,6 +23,9 @@
           <nuxt-link class="link" to="/profile">个人档</nuxt-link>
         </li>
         <li class="item">
+          <nuxt-link class="link" to="/links">友情链接</nuxt-link>
+        </li>
+        <li class="item">
           <nuxt-link class="link" to="/"><s>更多</s></nuxt-link>
         </li>
       </ul>
