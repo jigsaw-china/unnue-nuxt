@@ -52,7 +52,9 @@
     },
     computed: {
       pinyinTwo () {
-        return pinyin(this.article.title.slice(0, 2), true)
+        const t = pinyin(this.article.title.slice(0, 2), true)
+        console.log(t)
+        return t
       }
     },
     methods: {

@@ -69,6 +69,9 @@
     color: #aaa;
     a {
       color: #aaa;
+      &:hover{
+        color: $orange;
+      }
     }
   }
 </style>
