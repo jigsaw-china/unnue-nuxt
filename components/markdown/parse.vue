@@ -27,6 +27,7 @@
 </script>
 <style lang="scss">
   .mdit{
+    color: #666;
     line-height: 1.6em;
     hr{
       border: none;
@@ -60,6 +61,14 @@
         font-family: Consolas,Inconsolata,Courier,monospace;
         font-size: 14px;
       }
+    }
+  }
+  .mdit >>> .source{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+    a {
+      color: #aaa;
     }
   }
 </style>
