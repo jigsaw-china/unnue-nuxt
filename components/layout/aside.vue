@@ -4,6 +4,7 @@
     <articles/>
     <tags/>
     <ad2/>
+    <ad3/>
     <ad/>
   </aside>
 </template>
@@ -14,6 +15,7 @@
   import Tags from '../aside/tags'
   import Ad from '../aside/ad'
   import Ad2 from '../aside/ad2'
+  import Ad3 from '../aside/ad3'
 
   export default {
     name: 'layout-aside',
@@ -22,7 +24,8 @@
       Articles,
       Tags,
       Ad,
-      Ad2
+      Ad2,
+      Ad3
     }
   }
 </script>
