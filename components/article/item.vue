@@ -130,20 +130,23 @@
       flex: 1;
       padding-left: 15px;
       .title{
+        max-height: 52px;
         padding: 2px 0 8px 0;
         .link{
           font-size: var(16);
+          line-height: 26px;
+          @include ellipsis;
         }
       }
       .desc{
         display: block;
-        margin-top: 4px;
+        margin-top: 2px;
         height: var(44);
         padding-bottom: 6px;
         .link{
           font-size: var(14);
           color: #888;
-          line-height: 1.2;
+          line-height: 1.25;
           @include ellipsis;
         }
       }

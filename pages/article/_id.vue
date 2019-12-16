@@ -171,9 +171,9 @@
     .article-body{
       padding: 5px 2px 10px 2px;
       .description{
-        margin: 5px 0;
+        margin: 5px 0 17px 0;
         padding: 10px;
-        border-left: 3px solid $orange;
+        border-left: 8px solid rgba(255,165,0,.7);
         font-size: 14px;
         color: #333;
         background: #ebf5fd;
