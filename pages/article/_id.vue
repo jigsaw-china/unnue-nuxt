@@ -5,7 +5,7 @@
       <span class="iconfont icon-top is-top" v-if="article.isTop"></span>
       <div class="article-head">
         <h1 class="title">{{article.title}}</h1>
-        <div class="msg">
+        <div class="info">
           <span><i class="iconfont icon-date"></i><i :title="article.publishDate | relativeTime"> {{article.publishDate | ago}}</i></span>
           <span><i class="iconfont icon-watch"></i><i> {{article.visitCount}}</i></span>
           <span v-if="article.tags">
@@ -31,6 +31,7 @@
         </div>
       </div>
       <div class="article-body">
+        <div class="description">{{article.description}}</div>
         <markdown-parse :content="article.content" :htmled="true"/>
       </div>
       <div class="article-foot">
@@ -147,7 +148,7 @@
         font-size: 22px;
         color: #333;
       }
-      .msg{
+      .info{
         padding: 10px 0;
         font-family: DINRegular;
         font-size: 14px;
@@ -169,10 +170,19 @@
     }
     .article-body{
       padding: 5px 2px 10px 2px;
+      .description{
+        margin: 5px 0;
+        padding: 10px;
+        border-left: 3px solid $orange;
+        font-size: 14px;
+        color: #333;
+        background: #ebf5fd;
+        line-height: 26px;
+      }
     }
     .article-foot{
       border-top: 1px solid #dcdfe6;
-      padding-top: 10px;
+      padding: 15px 0 5px 0;
       font-family: DINRegular;
       font-size: 14px;
       span{
