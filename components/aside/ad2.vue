@@ -1,7 +1,7 @@
 <template>
   <div class="aside-block">
     <div class="title">
-      <span class="iconfont icon-ad"></span> 支撑
+      <span class="iconfont icon-ad"></span> 支持
     </div>
     <div id="ad2"></div>
   </div>

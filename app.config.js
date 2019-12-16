@@ -10,4 +10,4 @@ export const SITE = {
 };
 
 // 百度联盟id
-export const adId = 'u3852431';
+export const adId = 'u5768008';

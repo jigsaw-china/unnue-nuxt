@@ -137,12 +137,13 @@
       }
       .desc{
         display: block;
-        height: var(48);
+        margin-top: 4px;
+        height: var(44);
         padding-bottom: 6px;
         .link{
-          font-size: var(16);
-          color: #666;
-          line-height: 1.25;
+          font-size: var(14);
+          color: #888;
+          line-height: 1.2;
           @include ellipsis;
         }
       }
